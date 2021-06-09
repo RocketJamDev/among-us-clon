@@ -25,7 +25,7 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isMovementActive())
+        if(IsMovementActive())
         {
             GestionarMovimiento();
             GestionarOrientacion();
@@ -62,7 +62,7 @@ public class CharacterController : MonoBehaviour
         transform.localScale = new Vector2(direction.x > 0 ? 1 : -1, transform.localScale.y);
     }
 
-    bool isMovementActive()
+    bool IsMovementActive()
     {
         return !GameObject.FindWithTag("Task");
     }

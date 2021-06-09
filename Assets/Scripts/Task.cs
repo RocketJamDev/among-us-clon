@@ -6,14 +6,16 @@ public class Task : MonoBehaviour
 {
 
     public GameObject task;
+    
     bool playerClose;
 
     // Update is called once per frame
     void Update()
     {
-        if (isTaskActive() && Input.GetKeyDown(KeyCode.E))
+        if (IsTaskActive() && Input.GetKeyDown(KeyCode.E))
         {
-            Instantiate(task);
+            Vector2 position = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width / 2, (Screen.height / 2)));
+            Instantiate(task, new Vector3(position.x, position.y, 0), Quaternion.identity, null);
         }
     }
 
@@ -33,7 +35,7 @@ public class Task : MonoBehaviour
         }
     }
 
-    private bool isTaskActive()
+    private bool IsTaskActive()
     {
         return playerClose && !GameObject.FindWithTag("Task");
     }

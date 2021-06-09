@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Task
+  - cable
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - BehindMask
   - Black
   - Objects
-  - 
+  - Tareas
   - 
   - 
   - 
